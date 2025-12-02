@@ -2,10 +2,26 @@
     font-family: "Google Sans Flex";
 }
 
-html main body section{
+html body {
     position: relative;
-    height: max-content;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+main {
+    position: relative;
+    height: 100%;
+    padding: 0% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 header {
     display: flex;
@@ -208,11 +224,13 @@ a {
     margin: 0;
     box-sizing: border-box;
 }
-.title{
+
+.title {
     text-align: center;
     margin: 1%;
     font-size: 35px;
 }
+
 .skill-item {
     font-size: 24px;
     font-weight: 500;
@@ -375,113 +393,141 @@ a {
     }
 }
 
-footer{
+footer {
     text-align: center;
-    margin-top: 50px ;
+    margin-top: 50px;
+}
+
+.contact-section{
+    width: 100%;
+    height:70%;
 }
 
 .contact-container {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
-.text-stack{
+.text-stack-container {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    /* justify-content: space-evenly; */
-    padding: 0px 50px;
-    width: 60%;
-
+    /* align-items: left; */
+    justify-content: center;
+    /* padding: 0px 50px; */
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    gap: 30px;
 }
 
-.text-stack>:first-child{
-    font-size: 30px;
+.text-stack-container>:first-child {
+    font-size: 55px;
+    margin: 0px;
 }
 
-.text-stack>:nth-child(2){
-    font-size: 40px;
+.text-stack-container>:nth-child(2) {
+    font-size: 45px;
+    margin: 0px;
 }
 
-.text-stack>:nth-child(3){
+.text-stack-container>:nth-child(3) {
     font-size: 25px;
+    margin: 0px;
 }
 
-.text-stack>p{
+/* .text-stack-container>p {
     margin-left: 0px;
     margin-top: 8px;
     margin-bottom: 8px;
-}
+    height: 100%;
+} */
 
-.enquiry-form-container{
+.enquiry-form-container {
     position: relative;
     display: flex;
-    padding: 30px 50px;
+    padding: 0px 50px;
     font-size: 24px;
-    height: max-content;
+    width: 50%;
+    height: 100%;
+    flex-direction: column; 
+    gap 10px;
 }
 
-div>input, textarea{
+div>input,
+textarea {
     background-color: #ececec;
     border: 1px solid rgb(233, 228, 228);
-    /* border-style: none; */
-    border-radius: 10px;
+    border-radius: 40px;
     width: 100%;
-    height: 50px;
+    height: 100%;
+    min-height: 35px;
     padding: 3px 20px;
     box-sizing: border-box;
-    
 }
-form{
+
+div>label{
+    /* padding: 10px; */
+    padding-left: 10px;
+}
+
+form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 50% ;
-    height: max-content;
-    gap: 30px;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
 }
-form>div{
-    gap: 15px;
-    min-width: 250px;
+
+form>div {
+    gap: 10px;
+    /* min-width: 250px; */
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: space-between;
+    gap: 5px
 }
 
-#email{
+#email {
     grid-column: span 2;
 }
 
-#message{
+#message {
     grid-column: span 2;
 }
 
-textarea{
-    height: 150px;
+textarea {
     width: 100%;
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
     box-sizing: border-box;
+    flex-shrink: 1;
 }
 
-button{
+button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    border-radius: 10px;
+    height: 100%;
+    width: 80%;
+    border-radius: 200px;
     border: 1px solid gray;
-    font-size: 18px;
-    padding: 20px 10px;
+    font-size: 24px;
+    border-style: none;
+    /* padding: 10px 10px; */
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
     border-color: #888;
     outline: none;
+    font-size: 18px;
 }
 
-.projects-section{
+.projects-section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -492,44 +538,32 @@ input:focus, textarea:focus{
     /* background-color: #555; */
 }
 
-
-html body{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+#submit{
+    
 }
 
-main{
-    height: 80%;
-    padding: 50px
-}
-
-div>a{
+div>a {
     color: grey;
     font-size: 28px;
 }
 
-div>a:hover{
+div>a:hover {
     color: #4b90ff;
     transition: 0.7s;
 }
 
-.projects-section>div{
+.projects-section>div {
     color: grey;
     font-size: 28px;
 }
 
-.projects-section>div:hover{
+.projects-section>div:hover {
     transform: scale(1.2);
     transition: 0.7s;
     color: #4b90ff;
 }
 
-.projects-section>p{
+.projects-section>p {
     font-size: 32px;
     animation: text-appear;
     color: #309641;
